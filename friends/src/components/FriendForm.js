@@ -1,24 +1,32 @@
 import React from 'react';
 
-const FriendForm = props => {
-    return (
-        <form method='post' className="friend-form">
-            <div>
-                <label for='name'>Name: </label>
-                <input type='text' id='name' name='user_name' />
-            </div>
-            <div>
-                <label for='age'>Age: </label>
-                <input type='text' id='age' name='user_age'/>
-            </div>
-            <div>
-                <label for='mail'>E-mail: </label>
-                <input type='email' id='mail' name='user_mail'/>
-            </div>
+class FriendForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            age: '',
+            email: ''
+        }
+    }
 
-            <button type='submit'>Add Friend</button>
-        </form>
-    );
+    componentDidMount() {
+        console.log('Friend Form has mounted');
+    }
+
+    render() {
+        return (
+            <div className='form-wrapper'>
+                <form onSubmit={this.handleSubmit}>
+                    <input name='name' type='text' value={this.state.name} placeholder='Name' onChange={this.handleInputChange}/>
+                    <input name='age' type='text' value={this.state.age} placeholder='Age' onChange={this.handleInputChange}/>
+                    <input name='email' type='email' value={this.state.email} placeholder='Email' onChange={this.handleInputChange}/>
+
+                    <button type='submit'>Add Friend</button>
+                </form>
+            </div>
+        );
+    }
 }
 
 export default FriendForm;

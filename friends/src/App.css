@@ -1,0 +1,48 @@
+.App {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.friend-card {
+    display: flex;
+    border: 1px solid lightgrey;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-wrapper {
+    margin-top: 80px;
+    width: 100%;
+}
+
+input {
+    border: 1px solid lightgrey;
+    width: 98%;
+    margin-bottom: 15px;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+button {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    float: right;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: 1px solid grey;
+}

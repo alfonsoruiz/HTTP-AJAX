@@ -8,8 +8,13 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      friends: []
+    this.state = { 
+      friends: [],
+      newFriend: {
+        name: '',
+        age: '',
+        email: ''
+      }
     }
   }
 
@@ -19,11 +24,18 @@ class App extends React.Component {
       .catch(err => console.log(err))
   }
 
+  addItem = (event, friend) => {
+    event.preventDefault();
+    axios.post('http://localhost:5000/friends', friend)
+      .then(res => this.setState({ newFriend: res.data }))
+      .catch(err => console.log(err))
+  };
+
   render() {
     return (
       <div className="App">
         <h1>Friends List</h1>
-        <FriendForm />
+        <FriendForm addItem={this.addItem}/>
         <FriendsList friends={this.state.friends}/>
       </div>
     );

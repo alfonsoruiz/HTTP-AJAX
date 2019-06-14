@@ -13,6 +13,10 @@
     width: 100%;
 }
 
+.friend-card:hover {
+    border: 1px solid grey;
+}
+
 .form-wrapper {
     margin-top: 80px;
     width: 100%;
@@ -44,5 +48,6 @@ button:focus {
 }
 
 input:focus {
-    outline: 1px solid grey;
+    outline: none;
+    border: 1px solid grey;
 }

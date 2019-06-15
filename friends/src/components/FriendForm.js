@@ -9,7 +9,7 @@ class FriendForm extends React.Component {
                 age: '',
                 email: ''
             }
-        }
+        };
     }
 
     changeHandler = event => {
@@ -36,6 +36,7 @@ class FriendForm extends React.Component {
     render() {
         return (
             <div className='form-wrapper'>
+                <h2>Add a friend</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         name='name' 

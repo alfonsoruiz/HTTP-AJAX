@@ -3,28 +3,15 @@
     margin: 0 auto;
 }
 
-.friend-card {
-    display: flex;
-    border: 1px solid lightgrey;
-    margin-bottom: 40px;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.friend-card:hover {
-    border: 1px solid grey;
-}
-
-.form-wrapper {
-    margin-top: 80px;
-    width: 100%;
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 input {
     border: 1px solid lightgrey;
-    width: 98%;
+    width: 100%;
     margin-bottom: 15px;
     height: 2rem;
     font-size: 1rem;
@@ -50,4 +37,52 @@ button:focus {
 input:focus {
     outline: none;
     border: 1px solid grey;
+}
+
+.home-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-wrapper h1 {
+    font-size: 3rem;
+}
+
+.home-wrapper a {
+    font-size: 1.5rem;
+}
+
+.friend-card {
+    display: flex;
+    border: 1px solid lightgrey;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.friend-card:hover {
+    border: 1px solid grey;
+}
+
+.friend-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.form-wrapper {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
 }

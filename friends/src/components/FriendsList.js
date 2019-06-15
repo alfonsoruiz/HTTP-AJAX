@@ -1,12 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Friend from './Friend';
+import Header from './Header';
 
 const FriendsList = props => {
     return (
         <div className="friends-list-wrapper">
+            <Header />  
             {props.friends.map(friend => (
-                <Friend friend={friend} key={friend.id}/>
+                <Link to={`/friends/${friend.id}`} key={friend.id}>
+                    <div className='friend-card'>
+                        <h2>{friend.name}</h2>
+                        <p>Age: {friend.age}</p>
+                        <p>Email: {friend.email}</p>
+                    </div>
+                </Link>
             ))}
         </div>
     );

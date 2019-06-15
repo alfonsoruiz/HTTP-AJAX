@@ -1,11 +1,15 @@
 import React from 'react';
 
 const Friend = props => {
+    const id = Number(props.match.params.id);
+    const friend = props.friends.find(friend => friend.id === id);
     return (
-        <div className="friend-card">
-            <h2>{props.friend.name}</h2>
-            <p>Age: {props.friend.age}</p>
-            <p>Email: {props.friend.email}</p>
+        <div className='friend-wrapper'>
+            <div className='friend-card'>
+                <h2>{friend.name}</h2>
+                <p>Age: {friend.age}</p>
+                <p>Email: {friend.email}</p>
+            </div>
         </div>
     );
 }

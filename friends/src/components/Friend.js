@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Friend = props => {
     const id = Number(props.match.params.id);
@@ -10,6 +11,8 @@ const Friend = props => {
                 <p>Age: {friend.age}</p>
                 <p>Email: {friend.email}</p>
             </div>
+            <Link to='/update' friend={friend} ><button>Update Friend</button></Link>
+            <button>Delete Friend</button>
         </div>
     );
 }

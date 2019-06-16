@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 const Header = props => {
     return (
         <div className='header-wrapper'>
-            <Link to='/'><h1>Friends List</h1></Link>
-            <Link to='/form'>+ Add friend</Link>
+            <Link to='/friends'><h1>Friends List</h1></Link>
+            <Link to='/form'>+ Add Friend</Link>
+            <Link to='/update'>+ Update Friend</Link>
+            <Link to='/delete'>+ Delete Friend</Link>
         </div>
     );
 }

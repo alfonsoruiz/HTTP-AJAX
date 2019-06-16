@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FriendForm extends React.Component {
+class UpdateFriend extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,7 +25,7 @@ class FriendForm extends React.Component {
     };
 
     handleSubmit = event => {
-        this.props.addItem(event, this.state.friend);
+        this.props.deleteItem(event, '1', this.state.friend);
         this.setState({
             friend : {
                 name: '',
@@ -38,7 +38,7 @@ class FriendForm extends React.Component {
     render() {
         return (
             <div className='form-wrapper'>
-                <h2>Add a friend</h2>
+                <h2>Delete a friend</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         name='name' 
@@ -62,11 +62,11 @@ class FriendForm extends React.Component {
                         onChange={this.changeHandler}
                     />
 
-                    <button type='submit'>Add Friend</button>
+                    <button type='submit'>Delete Friend</button>
                 </form>
             </div>
         );
     }
 }
 
-export default FriendForm;
+export default UpdateFriend;

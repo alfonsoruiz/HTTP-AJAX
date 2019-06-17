@@ -11,8 +11,8 @@ const Friend = props => {
                 <p>Age: {friend.age}</p>
                 <p>Email: {friend.email}</p>
             </div>
-            <Link to='/update' friend={friend} ><button>Update Friend</button></Link>
-            <button>Delete Friend</button>
+            <Link to='/update'><button>Update Friend</button></Link>
+            <Link to='/delete'><button>Delete Friend</button></Link>
         </div>
     );
 }

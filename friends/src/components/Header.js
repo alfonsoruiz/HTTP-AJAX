@@ -6,8 +6,6 @@ const Header = props => {
         <div className='header-wrapper'>
             <Link to='/friends'><h1>Friends List</h1></Link>
             <Link to='/form'>+ Add Friend</Link>
-            <Link to='/update'>+ Update Friend</Link>
-            <Link to='/delete'>+ Delete Friend</Link>
         </div>
     );
 }

@@ -2,12 +2,20 @@ import React from 'react';
 
 class FriendForm extends React.Component {
     state = {
-        friend: this.props.activeItem || {
+        friend: this.props.activeFriend || {
             name: '',
             age: '',
             email: ''
         }
     };
+
+    componentDidUpdate(prevProps) {
+        if(this.props.activeFriend && prevProps.activeFriend !== this.props.activeFriend) {
+            this.setState({
+                friend: this.props.activeFriend
+            });
+        }
+    }
 
     changeHandler = event => {
         event.persist();
@@ -22,7 +30,12 @@ class FriendForm extends React.Component {
     };
 
     handleSubmit = event => {
-        this.props.addItem(event, this.state.friend);
+        if (this.props.activeFriend) {
+            this.props.updateItem(event, this.state.friend)
+        } else {
+            this.props.addItem(event, this.state.friend);
+        }
+
         this.setState({
             friend : {
                 name: '',
@@ -35,7 +48,7 @@ class FriendForm extends React.Component {
     render() {
         return (
             <div className='form-wrapper'>
-                <h2>Add a friend</h2>
+                <h2>{`${this.props.activeFriend ? 'Update' : 'Add New'} Friend`}</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         name='name' 
@@ -59,7 +72,9 @@ class FriendForm extends React.Component {
                         onChange={this.changeHandler}
                     />
 
-                    <button type='submit'>Add Friend</button>
+                    <button type='submit'>
+                        {`${this.props.activeFriend ? 'Update' : 'Add New'} Friend`}
+                    </button>
                 </form>
             </div>
         );

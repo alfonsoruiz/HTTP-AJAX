@@ -1,0 +1,93 @@
+.App {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid lightgrey;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+button {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    float: right;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid grey;
+}
+
+.home-wrapper {
+    height: calc(100vh - 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-wrapper h1 {
+    font-size: 3rem;
+}
+
+.home-wrapper a {
+    font-size: 1.5rem;
+}
+
+.friend-card {
+    display: flex;
+    border: 1px solid lightgrey;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.friend-card:hover {
+    border: 1px solid grey;
+}
+
+.friend-wrapper {
+    height: calc(100vh - 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.friend-wrapper button {
+    margin-bottom: 20px;
+}
+
+.form-wrapper {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
